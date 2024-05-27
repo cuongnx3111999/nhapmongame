@@ -1,23 +1,9 @@
-﻿  Animation.cpp
-  Animations.cpp
-  Brick.cpp
-  Coin.cpp
-  Collision.cpp
-  Game.cpp
-  GameObject.cpp
-  Goomba.cpp
-  main.cpp
-  Mario.cpp
-  Platform.cpp
+﻿  Game.cpp
+  MysteryBox.cpp
   PlayScene.cpp
-F:\hoc\game\gamedev-intro-tutorials\05-SceneManager\PlayScene.cpp(80,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\gamedev-intro-tutorials\05-SceneManager\PlayScene.cpp(270,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\gamedev-intro-tutorials\05-SceneManager\PlayScene.cpp(295,20): warning C4018: '<': signed/unsigned mismatch
-  Portal.cpp
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(80,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(272,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(297,20): warning C4018: '<': signed/unsigned mismatch
   SampleKeyEventHandler.cpp
-  Sprite.cpp
-  Sprites.cpp
-  Textures.cpp
-  Utils.cpp
   Generating Code...
-  05-SceneManager.vcxproj -> F:\hoc\game\gamedev-intro-tutorials\Debug\05-SceneManager.exe
+  05-SceneManager.vcxproj -> F:\hoc\game\nhapmongame\Debug\05-SceneManager.exe
