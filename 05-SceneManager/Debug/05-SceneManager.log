@@ -1,9 +1,12 @@
-﻿  Game.cpp
-  MysteryBox.cpp
+﻿  Bush.cpp
+  Game.cpp
+  main.cpp
   PlayScene.cpp
 F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(80,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(272,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(297,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(275,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(300,20): warning C4018: '<': signed/unsigned mismatch
   SampleKeyEventHandler.cpp
+  Tree.cpp
+  WarpPipe.cpp
   Generating Code...
   05-SceneManager.vcxproj -> F:\hoc\game\nhapmongame\Debug\05-SceneManager.exe

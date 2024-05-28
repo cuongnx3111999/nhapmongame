@@ -1,6 +1,7 @@
 F:\hoc\game\nhapmongame\05-SceneManager\Animation.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Animation.obj
 F:\hoc\game\nhapmongame\05-SceneManager\Animations.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Animations.obj
 F:\hoc\game\nhapmongame\05-SceneManager\Brick.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Brick.obj
+F:\hoc\game\nhapmongame\05-SceneManager\Bush.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Bush.obj
 F:\hoc\game\nhapmongame\05-SceneManager\Coin.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Coin.obj
 F:\hoc\game\nhapmongame\05-SceneManager\Collision.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Collision.obj
 F:\hoc\game\nhapmongame\05-SceneManager\debug.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\debug.obj
@@ -18,4 +19,6 @@ F:\hoc\game\nhapmongame\05-SceneManager\SampleKeyEventHandler.cpp;F:\hoc\game\nh
 F:\hoc\game\nhapmongame\05-SceneManager\Sprite.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Sprite.obj
 F:\hoc\game\nhapmongame\05-SceneManager\Sprites.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Sprites.obj
 F:\hoc\game\nhapmongame\05-SceneManager\Textures.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Textures.obj
+F:\hoc\game\nhapmongame\05-SceneManager\Tree.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Tree.obj
 F:\hoc\game\nhapmongame\05-SceneManager\Utils.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\Utils.obj
+F:\hoc\game\nhapmongame\05-SceneManager\WarpPipe.cpp;F:\hoc\game\nhapmongame\05-SceneManager\Debug\WarpPipe.obj

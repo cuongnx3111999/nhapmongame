@@ -8,6 +8,9 @@
 #include "Goomba.h"
 #include "Ground.h"
 #include "MysteryBox.h"
+#include "Bush.h"
+#include "Tree.h"
+#include "WarpPipe.h"
 //#include "Koopas.h"
 
 
