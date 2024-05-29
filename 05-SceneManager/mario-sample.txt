@@ -17,4 +17,5 @@ height	240
 0	textures\mario.png
 10	textures\enemies.png
 20	textures\misc.png
-30 	textures\nature.png
+30 	textures\addition.png
+40	textures\black.png

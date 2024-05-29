@@ -81,7 +81,70 @@
     <ClCompile Include="MysteryBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="qq.cpp">
+    <ClCompile Include="Bush.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WarpPipe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackBackGround.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cloud.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PipeAbove.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PipeBelow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair8.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stair9.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wood.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -161,7 +224,70 @@
     <ClInclude Include="MysteryBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="qq.h">
+    <ClInclude Include="Bush.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WarpPipe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackBackGround.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cloud.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PipeAbove.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PipeBelow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stair9.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wood.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

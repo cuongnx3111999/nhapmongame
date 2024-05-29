@@ -14,3 +14,8 @@ void CBush::GetBoundingBox(float& l, float& t, float& r, float& b)
 	r = l + BUSH_BBOX_WIDTH;
 	b = t + BUSH_BBOX_HEIGHT;
 }
+
+int Isblocking()
+{
+	return 0;
+}
