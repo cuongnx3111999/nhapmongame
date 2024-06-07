@@ -1,13 +1,62 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Project1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Mario.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Animation.cpp
+  Animations.cpp
+  BlackBackground.cpp
+  Brick.cpp
+  Bush.cpp
+  Cloud.cpp
+  Coin.cpp
+  CoinFromBox.cpp
+  Collision.cpp
+  debug.cpp
   Game.cpp
+  GameObject.cpp
   Goomba.cpp
-  Mario.cpp
-  MysteryBox.cpp
-  PlayScene.cpp
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(82,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(323,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(348,20): warning C4018: '<': signed/unsigned mismatch
-  SampleKeyEventHandler.cpp
+  Ground.cpp
+  Koopas.cpp
   main.cpp
+F:\hoc\game\nhapmongame\05-SceneManager\AssetIDs.h(44,9): warning C4005: 'OBJECT_TYPE_KOOPAS': macro redefinition
+  Mario.cpp
+  MushRoom.cpp
+  MysteryBox.cpp
+  PakkunFlower.cpp
   Generating Code...
-  05-SceneManager.vcxproj -> F:\hoc\game\nhapmongame\Debug\Mario.exe
+  Compiling...
+  PipeAbove.cpp
+  PipeBelow.cpp
+  Platform.cpp
+  PlayScene.cpp
+F:\hoc\game\nhapmongame\05-SceneManager\AssetIDs.h(44,9): warning C4005: 'OBJECT_TYPE_KOOPAS': macro redefinition
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(82,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(326,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(351,20): warning C4018: '<': signed/unsigned mismatch
+  Portal.cpp
+  Prize.cpp
+  SampleKeyEventHandler.cpp
+  Sprite.cpp
+  Sprites.cpp
+  Stair0.cpp
+  Stair1.cpp
+  Stair2.cpp
+  Stair3.cpp
+  Stair4.cpp
+  Stair5.cpp
+  Stair6.cpp
+  Stair7.cpp
+  Stair8.cpp
+  Stair9.cpp
+  Textures.cpp
+  Generating Code...
+  Compiling...
+  Tree1.cpp
+  Tree2.cpp
+  Tree3.cpp
+  Tree4.cpp
+  Utils.cpp
+  WarpPipe.cpp
+  WingGoomba.cpp
+  WingKoopas.cpp
+  Wood.cpp
+  Generating Code...
+  LINK : F:\hoc\game\nhapmongame\Debug\Project1.exe not found or not built by the last incremental link; performing full link
+  05-SceneManager.vcxproj -> F:\hoc\game\nhapmongame\Debug\Project1.exe
