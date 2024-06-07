@@ -1,14 +1,13 @@
-﻿  Bush.cpp
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Project1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Game.cpp
-  Ground.cpp
-  PipeBelow.cpp
+  Goomba.cpp
+  Mario.cpp
+  MysteryBox.cpp
   PlayScene.cpp
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(81,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(311,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(336,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(82,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(323,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(348,20): warning C4018: '<': signed/unsigned mismatch
   SampleKeyEventHandler.cpp
-  Stair0.cpp
-  Tree3.cpp
-  Wood.cpp
+  main.cpp
   Generating Code...
-  05-SceneManager.vcxproj -> F:\hoc\game\nhapmongame\Debug\05-SceneManager.exe
+  05-SceneManager.vcxproj -> F:\hoc\game\nhapmongame\Debug\Mario.exe

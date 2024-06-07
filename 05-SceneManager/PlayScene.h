@@ -6,7 +6,6 @@
 #include "Brick.h"
 #include "Mario.h"
 #include "Goomba.h"
-#include "Ground.h"
 #include "MysteryBox.h"
 #include "Bush.h"
 #include "Tree1.h"
@@ -29,11 +28,15 @@
 #include "PipeBelow.h"
 #include "PipeAbove.h"
 #include "BlackBackground.h"
+#include "Prize.h"
+#include "CoinFromBox.h"
+#include "MushRoom.h"
 //#include "Koopas.h"
 
 
 class CPlayScene: public CScene
 {
+static CPlayScene* __instance;
 protected: 
 	// A play scene has to have player, right? 
 	LPGAMEOBJECT player;					
@@ -62,6 +65,7 @@ public:
 	void PurgeDeletedObjects();
 
 	static bool IsGameObjectDeleted(const LPGAMEOBJECT& o);
+	virtual void SpawnGameObject(CGameObject* obj, float x, float y);
 };
 
 typedef CPlayScene* LPPLAYSCENE;

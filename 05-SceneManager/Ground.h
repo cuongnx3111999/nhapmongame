@@ -1,6 +1,8 @@
 #pragma once
 
 #include "GameObject.h"
+
+//
 class CGround : public CGameObject
 {
 protected:
@@ -8,6 +10,7 @@ protected:
 	float cellWidth;
 	float cellHeight;
 	int spriteIdBegin, spriteIdMiddle, spriteIdEnd;
+
 public:
 	CGround(float x, float y,
 		float cell_width, float cell_height, int length,
@@ -20,6 +23,7 @@ public:
 		this->spriteIdMiddle = sprite_id_middle;
 		this->spriteIdEnd = sprite_id_end;
 	}
+
 	void Render();
 	void Update(DWORD dt) {}
 	void GetBoundingBox(float& l, float& t, float& r, float& b);
@@ -27,4 +31,3 @@ public:
 };
 
 typedef CGround* PLGROUND;
-

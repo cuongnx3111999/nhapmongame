@@ -9,9 +9,9 @@
 #define BLACKBACKGROUND_BBOX_WIDTH 336
 #define BLACKBACKGROUND_BBOX_HEIGHT 416
 
-class CBlackBackGround : public CGameObject {
+class CBlackBackground : public CGameObject {
 public:
-	CBlackBackGround(float x, float y) : CGameObject(x, y) {}
+	CBlackBackground(float x, float y) : CGameObject(x, y) {}
 	void Render();
 	void Update(DWORD dt) {}
 	void GetBoundingBox(float& l, float& t, float& r, float& b);
