@@ -8,28 +8,32 @@
   Coin.cpp
   CoinFromBox.cpp
   Collision.cpp
-  debug.cpp
+  Curtain.cpp
+F:\hoc\game\nhapmongame\05-SceneManager\Curtain.cpp(20,12): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+  fireball.cpp
   Game.cpp
   GameObject.cpp
   Goomba.cpp
   Ground.cpp
   Koopas.cpp
   main.cpp
-F:\hoc\game\nhapmongame\05-SceneManager\AssetIDs.h(44,9): warning C4005: 'OBJECT_TYPE_KOOPAS': macro redefinition
+F:\hoc\game\nhapmongame\05-SceneManager\AssetIDs.h(45,9): warning C4005: 'OBJECT_TYPE_KOOPAS': macro redefinition
   Mario.cpp
   MushRoom.cpp
   MysteryBox.cpp
-  PakkunFlower.cpp
   Generating Code...
   Compiling...
+  PakkunFlower1.cpp
+  PakkunFlower2.cpp
+  PakkunFlower3.cpp
   PipeAbove.cpp
   PipeBelow.cpp
   Platform.cpp
   PlayScene.cpp
-F:\hoc\game\nhapmongame\05-SceneManager\AssetIDs.h(44,9): warning C4005: 'OBJECT_TYPE_KOOPAS': macro redefinition
+F:\hoc\game\nhapmongame\05-SceneManager\AssetIDs.h(45,9): warning C4005: 'OBJECT_TYPE_KOOPAS': macro redefinition
 F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(82,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(326,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(351,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(332,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(357,20): warning C4018: '<': signed/unsigned mismatch
   Portal.cpp
   Prize.cpp
   SampleKeyEventHandler.cpp
@@ -43,20 +47,21 @@ F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(351,20): warning C4018: '<
   Stair5.cpp
   Stair6.cpp
   Stair7.cpp
+  Generating Code...
+  Compiling...
   Stair8.cpp
   Stair9.cpp
   Textures.cpp
-  Generating Code...
-  Compiling...
+  Title.cpp
   Tree1.cpp
   Tree2.cpp
   Tree3.cpp
   Tree4.cpp
-  Utils.cpp
   WarpPipe.cpp
   WingGoomba.cpp
+F:\hoc\game\nhapmongame\05-SceneManager\WingGoomba.cpp(24,9): warning C4305: '-=': truncation from 'double' to 'float'
   WingKoopas.cpp
+F:\hoc\game\nhapmongame\05-SceneManager\WingKoopas.cpp(24,9): warning C4305: '-=': truncation from 'double' to 'float'
   Wood.cpp
   Generating Code...
-  LINK : F:\hoc\game\nhapmongame\Debug\Project1.exe not found or not built by the last incremental link; performing full link
   05-SceneManager.vcxproj -> F:\hoc\game\nhapmongame\Debug\Project1.exe
