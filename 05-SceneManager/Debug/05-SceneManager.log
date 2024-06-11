@@ -1,5 +1,4 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Mario.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Animation.cpp
+﻿  Animation.cpp
   Animations.cpp
   BlackBackground.cpp
   Brick.cpp
@@ -9,7 +8,8 @@
   CoinFromBox.cpp
   Collision.cpp
   Curtain.cpp
-F:\hoc\game\nhapmongame\05-SceneManager\Curtain.cpp(20,12): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+F:\hoc\game\New folder\clone\test\05-SceneManager\Curtain.cpp(20,12): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+  debug.cpp
   fireball.cpp
   Game.cpp
   GameObject.cpp
@@ -17,12 +17,12 @@ F:\hoc\game\nhapmongame\05-SceneManager\Curtain.cpp(20,12): warning C4244: '-=':
   Ground.cpp
   Koopas.cpp
   main.cpp
-F:\hoc\game\nhapmongame\05-SceneManager\AssetIDs.h(45,9): warning C4005: 'OBJECT_TYPE_KOOPAS': macro redefinition
+F:\hoc\game\New folder\clone\test\05-SceneManager\AssetIDs.h(45,9): warning C4005: 'OBJECT_TYPE_KOOPAS': macro redefinition
   Mario.cpp
   MushRoom.cpp
-  MysteryBox.cpp
   Generating Code...
   Compiling...
+  MysteryBox.cpp
   PakkunFlower1.cpp
   PakkunFlower2.cpp
   PakkunFlower3.cpp
@@ -30,10 +30,10 @@ F:\hoc\game\nhapmongame\05-SceneManager\AssetIDs.h(45,9): warning C4005: 'OBJECT
   PipeBelow.cpp
   Platform.cpp
   PlayScene.cpp
-F:\hoc\game\nhapmongame\05-SceneManager\AssetIDs.h(45,9): warning C4005: 'OBJECT_TYPE_KOOPAS': macro redefinition
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(82,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(332,20): warning C4018: '<': signed/unsigned mismatch
-F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(357,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\New folder\clone\test\05-SceneManager\AssetIDs.h(45,9): warning C4005: 'OBJECT_TYPE_KOOPAS': macro redefinition
+F:\hoc\game\New folder\clone\test\05-SceneManager\PlayScene.cpp(82,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\New folder\clone\test\05-SceneManager\PlayScene.cpp(332,20): warning C4018: '<': signed/unsigned mismatch
+F:\hoc\game\New folder\clone\test\05-SceneManager\PlayScene.cpp(357,20): warning C4018: '<': signed/unsigned mismatch
   Portal.cpp
   Prize.cpp
   SampleKeyEventHandler.cpp
@@ -46,9 +46,9 @@ F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(357,20): warning C4018: '<
   Stair4.cpp
   Stair5.cpp
   Stair6.cpp
-  Stair7.cpp
   Generating Code...
   Compiling...
+  Stair7.cpp
   Stair8.cpp
   Stair9.cpp
   Textures.cpp
@@ -57,11 +57,12 @@ F:\hoc\game\nhapmongame\05-SceneManager\PlayScene.cpp(357,20): warning C4018: '<
   Tree2.cpp
   Tree3.cpp
   Tree4.cpp
+  Utils.cpp
   WarpPipe.cpp
   WingGoomba.cpp
-F:\hoc\game\nhapmongame\05-SceneManager\WingGoomba.cpp(24,9): warning C4305: '-=': truncation from 'double' to 'float'
+F:\hoc\game\New folder\clone\test\05-SceneManager\WingGoomba.cpp(24,9): warning C4305: '-=': truncation from 'double' to 'float'
   WingKoopas.cpp
-F:\hoc\game\nhapmongame\05-SceneManager\WingKoopas.cpp(24,9): warning C4305: '-=': truncation from 'double' to 'float'
+F:\hoc\game\New folder\clone\test\05-SceneManager\WingKoopas.cpp(24,9): warning C4305: '-=': truncation from 'double' to 'float'
   Wood.cpp
   Generating Code...
-  05-SceneManager.vcxproj -> F:\hoc\game\nhapmongame\Debug\Project1.exe
+  05-SceneManager.vcxproj -> F:\hoc\game\New folder\clone\test\Debug\Project1.exe
