@@ -9,6 +9,7 @@
 #define WINGGOOMBA_BBOX_HEIGHT 24
 
 #define WINGGOOMBA_STATE_DIE 100
+#define WINGGOOMBA_STATE_DIE_2 200
 
 #define ID_ANI_WINGGOOMBA 38000
 
@@ -24,7 +25,7 @@ protected:
 	virtual void Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects);
 	virtual void Render();
 
-	virtual int IsCollidable() { return 1; };
+	virtual int IsCollidable() { return !(state == WINGGOOMBA_STATE_DIE_2); }
 	virtual int IsBlocking() { return 0; }
 	virtual void OnNoCollision(DWORD dt);
 

@@ -31,6 +31,12 @@
     <Filter Include="Source Files\FirstSceneObject">
       <UniqueIdentifier>{cee9dee5-6700-44d5-a24c-d71ad9a30b49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Spawners">
+      <UniqueIdentifier>{ecac3b3c-66bb-4ad3-b025-8f9386f4f250}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Spawners">
+      <UniqueIdentifier>{35b58243-dca4-4ebe-9ac8-6225e58607f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -197,6 +203,21 @@
     </ClCompile>
     <ClCompile Include="fireball.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spawner.cpp">
+      <Filter>Source Files\Spawners</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleNumber.cpp">
+      <Filter>Source Files\FirstSceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Floor.cpp">
+      <Filter>Source Files\FirstSceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>Source Files\FirstSceneObject</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundItems.cpp">
+      <Filter>Source Files\FirstSceneObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -373,6 +394,33 @@
     </ClInclude>
     <ClInclude Include="fireball.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner.h">
+      <Filter>Header Files\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner1.h">
+      <Filter>Header Files\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner2.h">
+      <Filter>Header Files\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner3.h">
+      <Filter>Header Files\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner4.h">
+      <Filter>Header Files\Spawners</Filter>
+    </ClInclude>
+    <ClInclude Include="Floor.h">
+      <Filter>Header Files\FirstSceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleNumber.h">
+      <Filter>Header Files\FirstSceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>Header Files\FirstSceneObject</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundItems.h">
+      <Filter>Header Files\FirstSceneObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

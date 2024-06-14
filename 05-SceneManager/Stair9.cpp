@@ -3,7 +3,7 @@
 void CStair9::Render()
 {
 	CAnimations* animations = CAnimations::GetInstance();
-	animations->Get(ID_ANI_STAIR9)->Render(x, y);
+	animations->Get(ID_ANI_STAIR9)->Render(x + 4, y + 4);
 	//RenderBoundingBox();
 }
 

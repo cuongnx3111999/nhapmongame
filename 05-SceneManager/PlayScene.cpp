@@ -146,14 +146,24 @@ void CPlayScene::_ParseSection_OBJECTS(string line)
 	case OBJECT_TYPE_BLACKBACKGROUND: obj = new CBlackBackground(x, y); break;
 	case OBJECT_TYPE_PRIZE: obj = new CPrize(x, y); break;
 	case OBJECT_TYPE_KOOPAS: obj = new CKoopas(x, y); break;
-	case OBJECT_TYPE_KOOPAS_2: obj = new CKoopas(x, y, x - 35, x + 35); break;
+	case OBJECT_TYPE_KOOPAS_1: obj = new CKoopas(x, y, x - 35, x + 35); break;
+	case OBJECT_TYPE_KOOPAS_2: obj = new CKoopas(x, y, x - 10, x + 10); break;
 	case OBJECT_TYPE_WINGGOOMBA: obj = new CWingGoomba(x, y); break;
 	case OBJECT_TYPE_WINGKOOPAS: obj = new CWingKoopas(x, y); break;
 	case OBJECT_TYPE_CURTAIN: obj = new CCurtain(x, y); break;
 	case OBJECT_TYPE_TITLE: obj = new CTitle(x, y); break;
+	case OBJECT_TYPE_TITLENUMBER: obj = new CTitleNumber(x, y); break; 
+	case OBJECT_TYPE_FLOOR: obj = new CFloor(x, y); break;
+	case OBJECT_TYPE_BACKGROUND: obj = new CBackground(x, y); break;
+	case OBJECT_TYPE_BACKGROUNDITEMS: obj = new CBackgroundItems(x, y); break;
 	case OBJECT_TYPE_PAKKUNFLOWER1: obj = new CPakkun1(x, y); break;
 	case OBJECT_TYPE_PAKKUNFLOWER2: obj = new CPakkun2(x, y); break;
 	case OBJECT_TYPE_PAKKUNFLOWER3: obj = new CPakkun3(x, y); break;
+	case OBJECT_TYPE_SPAWNER: obj = new CSpawner(x, y); break;
+	case OBJECT_TYPE_SPAWNER1: obj = new CSpawner1(x, y); break;
+	case OBJECT_TYPE_SPAWNER2: obj = new CSpawner2(x, y); break;
+	case OBJECT_TYPE_SPAWNER3: obj = new CSpawner3(x, y); break;
+	case OBJECT_TYPE_SPAWNER4: obj = new CSpawner4(x, y); break;
 
 	case OBJECT_TYPE_PLATFORM:
 	{
@@ -293,11 +303,34 @@ void CPlayScene::Update(DWORD dt)
 	{
 		coObjects.push_back(objects[i]);
 	}
+	
+	// Update camera to follow mario
+	float cx, cy;
+	player->GetPosition(cx, cy);
+
+	CGame* game = CGame::GetInstance();
+	cx -= game->GetBackBufferWidth() / 2;
+	cy -= game->GetBackBufferHeight() / 2;
+
+	if (CGame::GetInstance()->GetCurrentScene()->id == 5) cx = 0;
+	else {
+		if (cx < 0) cx = 0;
+		if (cx > 2545) cx = 2545;
+	}
+	
+	CGame::GetInstance()->SetCamPos(cx, 0.0f /*cy*/);
 
 	size_t i = 0;
 	while (i < objects.size())
 	{
 		objects[i]->Update(dt, &coObjects);
+		
+		//delete objects that get out of camera
+		if (objects[i]->DeleteOffCamera()) {
+			if (objects[i]->x - 150 < cx || objects[i]->x + 150 > cx) {  DebugOut(L"delete object %f\n", objects[i]->x); objects[i]->Delete(); }
+		}
+
+		//spawn sub object
 		if (objects[i]->CreateSubObject) {
 			CGameObject* obj = NULL;
 			obj = objects[i]->subObject;
@@ -310,19 +343,6 @@ void CPlayScene::Update(DWORD dt)
 
 	// skip the rest if scene was already unloaded (Mario::Update might trigger PlayScene::Unload)
 	if (player == NULL) return; 
-
-	// Update camera to follow mario
-	float cx, cy;
-	player->GetPosition(cx, cy);
-
-	CGame *game = CGame::GetInstance();
-	cx -= game->GetBackBufferWidth() / 2;
-	cy -= game->GetBackBufferHeight() / 2;
-
-	if (cx < 0) cx = 0;
-	if (cx > 2545) cx = 2545;
-
-	CGame::GetInstance()->SetCamPos(cx, 0.0f /*cy*/);
 
 	PurgeDeletedObjects();
 }

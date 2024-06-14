@@ -20,11 +20,6 @@ void CWingKoopas::GetBoundingBox(float& left, float& top, float& right, float& b
 
 void CWingKoopas::OnNoCollision(DWORD dt)
 {
-	if (jump_timer > 2000) {
-		vy -= 0.3;
-		jump_timer = 0;
-	}
-	else jump_timer += dt;
 	x += vx * dt;
 	y += vy * dt;
 };
@@ -34,12 +29,13 @@ void CWingKoopas::OnCollisionWith(LPCOLLISIONEVENT e)
 	if (e->ny < 0 && e->obj->IsStair())
 	{
 		vy = 0;
-		//isOnPlatform = true;
+		isOnPlatForm = true;
 	}
 	if (!e->obj->IsBlocking()) return;
 	if (e->ny != 0)
 	{
-		vy = 0;
+		vy = 0; 
+		isOnPlatForm = true;
 	}
 	else if (e->nx != 0)
 	{
@@ -52,6 +48,11 @@ void CWingKoopas::OnCollisionWith(LPCOLLISIONEVENT e)
 
 void CWingKoopas::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 {
+	if (isOnPlatForm) 
+	{
+		vy -= 0.25;
+	}
+	isOnPlatForm = false;
 	vy += ay * dt;
 	vx += ax * dt;
 	if (state == WINGKOOPAS_STATE_DIE && GetTickCount64() - timer > 50) {
@@ -74,10 +75,18 @@ void CWingKoopas::Render()
 void CWingKoopas::SetState(int state)
 {
 	CGameObject::SetState(state);
-	if (state == WINGKOOPAS_STATE_DIE) {
+	if (state == WINGKOOPAS_STATE_DIE) 
+	{
 		subObject = new CKoopas(x, y);
 		subObject->SetPosition(x, y - 10);
 		CreateSubObject = true;
 		timer = GetTickCount64();
+	}
+	else if (state == WINGKOOPAS_STATE_DIE_2)
+	{
+		y -= 10;
+		vy = -0.05f;
+		vx = 0;
+		ax = 0;
 	}
 }

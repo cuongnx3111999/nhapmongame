@@ -149,6 +149,8 @@
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Animations.cpp" />
+    <ClCompile Include="Background.cpp" />
+    <ClCompile Include="BackgroundItems.cpp" />
     <ClCompile Include="BlackBackground.cpp" />
     <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Bush.cpp" />
@@ -159,6 +161,7 @@
     <ClCompile Include="Curtain.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="fireball.cpp" />
+    <ClCompile Include="Floor.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Goomba.cpp" />
@@ -178,6 +181,7 @@
     <ClCompile Include="Portal.cpp" />
     <ClCompile Include="Prize.cpp" />
     <ClCompile Include="SampleKeyEventHandler.cpp" />
+    <ClCompile Include="Spawner.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Sprites.cpp" />
     <ClCompile Include="Stair0.cpp" />
@@ -192,6 +196,7 @@
     <ClCompile Include="Stair9.cpp" />
     <ClCompile Include="Textures.cpp" />
     <ClCompile Include="Title.cpp" />
+    <ClCompile Include="TitleNumber.cpp" />
     <ClCompile Include="Tree1.cpp" />
     <ClCompile Include="Tree2.cpp" />
     <ClCompile Include="Tree3.cpp" />
@@ -207,6 +212,8 @@
     <ClInclude Include="AnimationFrame.h" />
     <ClInclude Include="Animations.h" />
     <ClInclude Include="AssetIDs.h" />
+    <ClInclude Include="Background.h" />
+    <ClInclude Include="BackgroundItems.h" />
     <ClInclude Include="BlackBackground.h" />
     <ClInclude Include="Brick.h" />
     <ClInclude Include="Bush.h" />
@@ -217,6 +224,7 @@
     <ClInclude Include="Curtain.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="fireball.h" />
+    <ClInclude Include="Floor.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Goomba.h" />
@@ -237,6 +245,11 @@
     <ClInclude Include="Prize.h" />
     <ClInclude Include="SampleKeyEventHandler.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="Spawner.h" />
+    <ClInclude Include="Spawner1.h" />
+    <ClInclude Include="Spawner2.h" />
+    <ClInclude Include="Spawner3.h" />
+    <ClInclude Include="Spawner4.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Sprites.h" />
     <ClInclude Include="Stair0.h" />
@@ -252,6 +265,7 @@
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Textures.h" />
     <ClInclude Include="Title.h" />
+    <ClInclude Include="TitleNumber.h" />
     <ClInclude Include="Tree1.h" />
     <ClInclude Include="Tree2.h" />
     <ClInclude Include="Tree3.h" />

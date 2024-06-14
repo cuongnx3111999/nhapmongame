@@ -21,10 +21,20 @@ CKoopas::CKoopas(float x, float y, float border_left, float border_right) :CGame
 
 void CKoopas::GetBoundingBox(float& left, float& top, float& right, float& bottom)
 {
-		left = x - KOOPAS_BBOX_WIDTH / 2;
+	
+	left = x - KOOPAS_BBOX_WIDTH / 2;
+	right = left + KOOPAS_BBOX_WIDTH;
+	if (state == KOOPAS_STATE_WALKING) 
+	{
 		top = y - KOOPAS_BBOX_HEIGHT / 2;
-		right = left + KOOPAS_BBOX_WIDTH;
 		bottom = top + KOOPAS_BBOX_HEIGHT;
+	}
+	else 
+	{
+		top = y - KOOPAS_BBOX_HEIGHT / 2 + 12;
+		bottom = top + KOOPAS_BBOX_HEIGHT - 12;
+	}
+		
 }
 
 void CKoopas::OnNoCollision(DWORD dt)
@@ -76,20 +86,20 @@ void CKoopas::OnCollisionWithGoomba(LPCOLLISIONEVENT e)
 void CKoopas::OnCollisionWithWingGoomba(LPCOLLISIONEVENT e)
 {
 	CWingGoomba* Winggoomba = dynamic_cast<CWingGoomba*>(e->obj);
-	Winggoomba->SetState(WINGGOOMBA_STATE_DIE);
+	Winggoomba->SetState(WINGGOOMBA_STATE_DIE_2);
 }
 void CKoopas::OnCollisionWithKoopas(LPCOLLISIONEVENT e) 
 {
 	CKoopas* koopas = dynamic_cast<CKoopas*>(e->obj);
-	if (koopas->GetState() == KOOPAS_STATE_WALKING)
+	if (koopas->GetState() == KOOPAS_STATE_WALKING || koopas->GetState() == KOOPAS_STATE_IDLE)
 	{
-		koopas->SetState(KOOPAS_STATE_DIE);
+		koopas->SetState(KOOPAS_STATE_DIE_2);
 	}
 }
 void CKoopas::OnCollisionWithWingKoopas(LPCOLLISIONEVENT e)
 {
 	CWingKoopas* wingkoopas = dynamic_cast<CWingKoopas*>(e->obj);
-	wingkoopas->SetState(WINGKOOPAS_STATE_DIE);
+	wingkoopas->SetState(WINGKOOPAS_STATE_DIE_2);
 }
 
 void CKoopas::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
@@ -140,12 +150,18 @@ void CKoopas::SetState(int state)
 	case KOOPAS_STATE_SPINNING:
 		break;
 	case KOOPAS_STATE_IDLE:
-		y -= 4;
+		y -= 6;
 		vx = 0;
 		break;
 	case KOOPAS_STATE_DIE:
 		y += 10;
 		vy = 0.05f;
+		break;
+	case KOOPAS_STATE_DIE_2:
+		y -= 10;
+		vy = -0.05f;
+		vx = 0;
+		ax = 0;
 		break;
 	}
 }

@@ -93,8 +93,10 @@ void CGoomba::SetState(int state)
 			vx = -GOOMBA_WALKING_SPEED;
 			break;
 		case GOOMBA_STATE_DIE_2:;
-			y += 10;
-			vy = 0.05f;
+			y -= 10;
+			vy = -0.05f;
+			vx = 0;
+			ax = 0;
 			break;
 	}
 }

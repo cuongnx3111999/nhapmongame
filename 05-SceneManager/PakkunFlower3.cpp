@@ -17,6 +17,9 @@ void CPakkun3::GetBoundingBox(float& left, float& top, float& right, float& bott
 
 void CPakkun3::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 {
+	x += vx * dt;
+	y += vy * dt;
+	
 	risetime += dt;
 	if (risetime < 2000) {
 		Rise();
@@ -28,8 +31,7 @@ void CPakkun3::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 		Fall();
 	}
 	else risetime = 0;
-	x += vx * dt;
-	y += vy * dt;
+	
 	float x1 = CGame::GetInstance()->GetCurrentScene()->xMario;
 	float y1 = CGame::GetInstance()->GetCurrentScene()->yMario;
 	if (x1 < x && y1 < y) {
@@ -89,7 +91,7 @@ void CPakkun3::Rise() {
 		vy = 0;
 	}
 	else
-		vy = -0.016f;
+		vy = -0.032f;
 }
 void CPakkun3::Fall() {
 	phase = 0; chargefireball = false;
@@ -99,7 +101,7 @@ void CPakkun3::Fall() {
 		y = y0 + 6;
 	}
 	else
-		vy = 0.016f;
+		vy = 0.032f;
 }
 void CPakkun3::Shoot() {
 	phase = 1;
@@ -124,6 +126,4 @@ void CPakkun3::Shoot() {
 
 void CPakkun3::OnNoCollision(DWORD dt)
 {
-	x += vx * dt;
-	y += vy * dt;
 };

@@ -71,11 +71,19 @@ void CWingGoomba::Render()
 void CWingGoomba::SetState(int state)
 {
 	CGameObject::SetState(state);
-	if (state == WINGGOOMBA_STATE_DIE) {
+	if (state == WINGGOOMBA_STATE_DIE) 
+	{
 		subObject = new CGoomba(x, y);
 		subObject->SetPosition(x, y + 4);
 		CreateSubObject = true;
 		timer = GetTickCount64();
+	} 
+	else if (state == WINGGOOMBA_STATE_DIE_2) 
+	{
+		y -= 10;
+		vy = -0.05f;
+		vx = 0;
+		ax = 0;
 	}
 }
 

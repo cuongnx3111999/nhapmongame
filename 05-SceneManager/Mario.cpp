@@ -16,6 +16,8 @@
 #include "PakkunFlower2.h"
 #include "PakkunFlower3.h"
 #include "fireball.h"
+#include "Prize.h"
+#include "Spawner.h"
 
 #include "Collision.h"
 
@@ -69,6 +71,8 @@ void CMario::OnCollisionWith(LPCOLLISIONEVENT e)
 		OnCollisionWithGoomba(e);
 	else if (dynamic_cast<CCoin*>(e->obj))
 		OnCollisionWithCoin(e);
+	else if (dynamic_cast<CPrize*>(e->obj))
+		OnCollisionWithPrize(e);
 	else if (dynamic_cast<CPortal*>(e->obj))
 		OnCollisionWithPortal(e);
 	else if (dynamic_cast<CMysteryBox*>(e->obj))
@@ -131,6 +135,17 @@ void CMario::OnCollisionWithCoin(LPCOLLISIONEVENT e)
 	coin++;
 }
 
+void CMario::OnCollisionWithPrize(LPCOLLISIONEVENT e)
+{
+	CPrize* prize = (CPrize*)(e->obj);
+	if (prize->GetState() == PRIZE_STATE_MUSHROOM)
+		prize->SetState(PRIZE_STATE_MUSHROOM_FLYUP);
+	else if (prize->GetState() == PRIZE_STATE_FLOWER)
+		prize->SetState(PRIZE_STATE_FLOWER_FLYUP);
+	else if (prize->GetState() == PRIZE_STATE_STAR)
+		prize->SetState(PRIZE_STATE_STAR_FLYUP);
+}
+
 void CMario::OnCollisionWithPortal(LPCOLLISIONEVENT e)
 {
 	CPortal* p = (CPortal*)e->obj;
@@ -153,7 +168,7 @@ void CMario::OnCollisionWithMushRoom(LPCOLLISIONEVENT e)
 		StartUntouchable();
 		y -= 8;
 		level = MARIO_LEVEL_BIG;
-		StartUntouchable();
+		//StartUntouchable();
 	}
 }
 
@@ -185,7 +200,15 @@ void CMario::OnCollisionWithKoopas(LPCOLLISIONEVENT e)
 	}
 	else if (koopas->GetState() == KOOPAS_STATE_IDLE)
 	{
-		if (e->nx < 0) {
+		if (e->ny < 0)
+		{
+			koopas->SetState(KOOPAS_STATE_SPINNING);
+			koopas->SpinLeft();
+			y -= 10;
+			vy = -MARIO_JUMP_DEFLECT_SPEED;
+			return;
+		}
+		else if (e->nx < 0) {
 			y -= 10;
 			koopas->SetState(KOOPAS_STATE_SPINNING);
 			koopas->SpinLeft();
@@ -271,20 +294,20 @@ void CMario::LoseLife(LPCOLLISIONEVENT e)
 	if (e != NULL) {
 		e->obj->Delete();
 	}
-	if (untouchable == 0)
-	{
-		if (level > MARIO_LEVEL_SMALL)
-		{
-			vy = -MARIO_JUMP_DEFLECT_SPEED;
-			level = MARIO_LEVEL_SMALL;
-			StartUntouchable();
-		}
-		else
-		{
-			DebugOut(L">>> Mario DIE >>> \n");
-			SetState(MARIO_STATE_DIE);
-		}
-	}
+	//if (untouchable == 0)
+	//{
+	//	if (level > MARIO_LEVEL_SMALL)
+	//	{
+	//		vy = -MARIO_JUMP_DEFLECT_SPEED;
+	//		level = MARIO_LEVEL_SMALL;
+	//		StartUntouchable();
+	//	}
+	//	else
+	//	{
+	//		DebugOut(L">>> Mario DIE >>> \n");
+	//		SetState(MARIO_STATE_DIE);
+	//	}
+	//}
 }
 //
 // Get animation ID for small Mario

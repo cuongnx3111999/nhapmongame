@@ -17,19 +17,20 @@ void CPakkun1::GetBoundingBox(float& left, float& top, float& right, float& bott
 
 void CPakkun1::Update(DWORD dt, vector<LPGAMEOBJECT>* coObjects)
 {
-	risetime += dt;
-	if (risetime < 2000) {
-		Rise(dt);
-	}
-	else if (risetime < 5000) {
-		Shoot(dt);
-	}
-	else if (risetime < 10000) {
-		Fall(dt);
-	}
-	else risetime = 0;
 	x += vx * dt;
 	y += vy * dt;
+	risetime += dt;
+	if (risetime < 2000) {
+		Rise();
+	}
+	else if (risetime < 5000) {
+		Shoot();
+	}
+	else if (risetime < 10000) {
+		Fall();
+	}
+	else risetime = 0;
+	
 	float x1 = CGame::GetInstance()->GetCurrentScene()->xMario;
 	float y1 = CGame::GetInstance()->GetCurrentScene()->yMario;
 	if (x1 < x && y1 < y) {
@@ -75,7 +76,7 @@ void CPakkun1::Render()
 	}
 	CAnimations::GetInstance()->Get(aniId)->Render(x, y);
 	
-	RenderBoundingBox();
+	//RenderBoundingBox();
 }
 
 void CPakkun1::SetState(int state)
@@ -83,15 +84,15 @@ void CPakkun1::SetState(int state)
 	CGameObject::SetState(state);
 }
 
-void CPakkun1::Rise(DWORD dt) {
-	if (vy < 0 && y < y0 - PAKKUN1_BBOX_HEIGHT) {
+void CPakkun1::Rise() {
+	if (y < y0 - PAKKUN1_BBOX_HEIGHT && vy < 0) {
 		y = y0 - PAKKUN1_BBOX_HEIGHT;
 		vy = 0;
 	}
 	else
-		vy = -0.016f;
+		vy = -0.032f;
 }
-void CPakkun1::Fall(DWORD dt) {
+void CPakkun1::Fall() {
 	phase = 0; chargefireball = false;
 	if (y > y0 + 6 && vy > 0)
 	{
@@ -99,9 +100,9 @@ void CPakkun1::Fall(DWORD dt) {
 		y = y0 + 6;
 	}
 	else
-	vy = 0.016f;
+	vy = 0.032f;
 }
-void CPakkun1::Shoot(DWORD dt) {
+void CPakkun1::Shoot() {
 	phase = 1;
 	if (!chargefireball) {
 		subObject = NULL;
@@ -118,12 +119,12 @@ void CPakkun1::Shoot(DWORD dt) {
 		subObject->SetPosition(x, y - 8);
 		chargefireball = true;
 		CreateSubObject = true;
+		DebugOut(L"Shooting\n");
 	}
 	vy = 0;
 }
 
 void CPakkun1::OnNoCollision(DWORD dt)
 {
-	x += vx * dt;
-	y += vy * dt;
+	
 };

@@ -35,9 +35,9 @@ protected:
 	virtual int IsBlocking() { return 0; }
 	virtual void OnNoCollision(DWORD dt);
 
-	virtual void Rise(DWORD dt);
-	virtual void Fall(DWORD dt);
-	virtual void Shoot(DWORD dt);
+	virtual void Rise();
+	virtual void Fall();
+	virtual void Shoot();
 
 
 public:
