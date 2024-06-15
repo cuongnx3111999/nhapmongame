@@ -2,7 +2,7 @@
 #include "fireball.h"
 #include "debug.h"
 
-CPakkun3::CPakkun3(float x, float y) :CGameObject(x, y)
+CPakkun3::CPakkun3(float x, float y) :CGameObject(x, y) //
 {
 	SetState(PAKKUN3_STATE_TOPLEFT);
 }

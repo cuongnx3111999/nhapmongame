@@ -1,6 +1,6 @@
 #include "Koopas.h"
 #include "Goomba.h"
-#include "WingGoomba.h"
+#include "ParaGoomba.h"
 #include "WingKoopas.h"
 #include "debug.h"
 
@@ -67,8 +67,8 @@ void CKoopas::OnCollisionWith(LPCOLLISIONEVENT e)
 			OnCollisionWithKoopas(e);
 		if (dynamic_cast<CGoomba*>(e->obj))
 			OnCollisionWithGoomba(e);
-		if (dynamic_cast<CWingGoomba*>(e->obj))
-			OnCollisionWithWingGoomba(e);
+		if (dynamic_cast<CParaGoomba*>(e->obj))
+			OnCollisionWithParaGoomba(e);
 		if (dynamic_cast<CWingKoopas*>(e->obj))
 			OnCollisionWithWingKoopas(e);
 	}
@@ -83,10 +83,10 @@ void CKoopas::OnCollisionWithGoomba(LPCOLLISIONEVENT e)
 		goomba->SetState(GOOMBA_STATE_DIE_2);
 	}
 }
-void CKoopas::OnCollisionWithWingGoomba(LPCOLLISIONEVENT e)
+void CKoopas::OnCollisionWithParaGoomba(LPCOLLISIONEVENT e)
 {
-	CWingGoomba* Winggoomba = dynamic_cast<CWingGoomba*>(e->obj);
-	Winggoomba->SetState(WINGGOOMBA_STATE_DIE_2);
+	CParaGoomba* ParaGoomba = dynamic_cast<CParaGoomba*>(e->obj);
+	ParaGoomba->SetState(ParaGoomba_STATE_DIE_2);
 }
 void CKoopas::OnCollisionWithKoopas(LPCOLLISIONEVENT e) 
 {

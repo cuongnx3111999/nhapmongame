@@ -5,7 +5,7 @@ class CSpawner3 : public CSpawner {
 public:
 	CSpawner3(float x, float y) : CSpawner(x, y) {
 		subObjects.clear();
-		//1 Koopas
-		subObjects.push_back(2);
+		//1 GreenKoopas
+		subObjects.push_back(5);
 	}
 };

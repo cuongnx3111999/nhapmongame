@@ -40,7 +40,7 @@ protected:
 
 	virtual void OnCollisionWith(LPCOLLISIONEVENT e);
 	virtual void OnCollisionWithGoomba(LPCOLLISIONEVENT e);
-	virtual void OnCollisionWithWingGoomba(LPCOLLISIONEVENT e);
+	virtual void OnCollisionWithParaGoomba(LPCOLLISIONEVENT e);
 	virtual void OnCollisionWithKoopas(LPCOLLISIONEVENT e);
 	virtual void OnCollisionWithWingKoopas(LPCOLLISIONEVENT e);
 

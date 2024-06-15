@@ -119,7 +119,6 @@ void CPakkun1::Shoot() {
 		subObject->SetPosition(x, y - 8);
 		chargefireball = true;
 		CreateSubObject = true;
-		DebugOut(L"Shooting\n");
 	}
 	vy = 0;
 }

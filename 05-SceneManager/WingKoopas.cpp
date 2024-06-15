@@ -1,4 +1,4 @@
-#include "Koopas.h"
+#include "GreenKoopas.h"
 #include "WingKoopas.h"
 #include "Goomba.h"
 #include "debug.h"
@@ -77,7 +77,7 @@ void CWingKoopas::SetState(int state)
 	CGameObject::SetState(state);
 	if (state == WINGKOOPAS_STATE_DIE) 
 	{
-		subObject = new CKoopas(x, y);
+		subObject = new CGreenKoopas(x, y);
 		subObject->SetPosition(x, y - 10);
 		CreateSubObject = true;
 		timer = GetTickCount64();

@@ -5,8 +5,9 @@
 #include "Animations.h"
 #include "Mario.h"
 #include "Goomba.h"
-#include "WingGoomba.h"
+#include "ParaGoomba.h"
 #include "Koopas.h"	
+#include "GreenKoopas.h"
 #include "WingKoopas.h"
 #include "Mario.h"
 

@@ -10,7 +10,7 @@
 #include "MysteryBox.h"
 #include "MushRoom.h"
 #include "Koopas.h"
-#include "WingGoomba.h"
+#include "ParaGoomba.h"
 #include "WingKoopas.h"
 #include "PakkunFlower1.h"
 #include "PakkunFlower2.h"
@@ -81,8 +81,8 @@ void CMario::OnCollisionWith(LPCOLLISIONEVENT e)
 		OnCollisionWithMushRoom(e);
 	else if (dynamic_cast<CKoopas*>(e->obj))
 		OnCollisionWithKoopas(e);
-	else if (dynamic_cast<CWingGoomba*>(e->obj))
-		OnCollisionWithWingGoomba(e);
+	else if (dynamic_cast<CParaGoomba*>(e->obj))
+		OnCollisionWithParaGoomba(e);
 	else if (dynamic_cast<CWingKoopas*>(e->obj))
 		OnCollisionWithWingKoopas(e);
 	else if (dynamic_cast<CPakkun1*>(e->obj))
@@ -168,7 +168,7 @@ void CMario::OnCollisionWithMushRoom(LPCOLLISIONEVENT e)
 		StartUntouchable();
 		y -= 8;
 		level = MARIO_LEVEL_BIG;
-		//StartUntouchable();
+		StartUntouchable();
 	}
 }
 
@@ -236,17 +236,17 @@ void CMario::OnCollisionWithKoopas(LPCOLLISIONEVENT e)
 		}
 	}
 }
-void CMario::OnCollisionWithWingGoomba(LPCOLLISIONEVENT e)
+void CMario::OnCollisionWithParaGoomba(LPCOLLISIONEVENT e)
 {
-	CWingGoomba* winggoomba = dynamic_cast<CWingGoomba*>(e->obj);
+	CParaGoomba* ParaGoomba = dynamic_cast<CParaGoomba*>(e->obj);
 
-	// jump on top >> kill WingGoomba and deflect a bit 
+	// jump on top >> kill ParaGoomba and deflect a bit 
 	if (e->ny < 0)
 	{
-		winggoomba->SetState(WINGGOOMBA_STATE_DIE);
+		ParaGoomba->SetState(ParaGoomba_STATE_DIE);
 		vy = -MARIO_JUMP_DEFLECT_SPEED;
 	}
-	else // hit by WingGoomba
+	else // hit by ParaGoomba
 	{
 		if (untouchable == 0)
 		{
@@ -294,20 +294,20 @@ void CMario::LoseLife(LPCOLLISIONEVENT e)
 	if (e != NULL) {
 		e->obj->Delete();
 	}
-	//if (untouchable == 0)
-	//{
-	//	if (level > MARIO_LEVEL_SMALL)
-	//	{
-	//		vy = -MARIO_JUMP_DEFLECT_SPEED;
-	//		level = MARIO_LEVEL_SMALL;
-	//		StartUntouchable();
-	//	}
-	//	else
-	//	{
-	//		DebugOut(L">>> Mario DIE >>> \n");
-	//		SetState(MARIO_STATE_DIE);
-	//	}
-	//}
+	if (untouchable == 0)
+	{
+		if (level > MARIO_LEVEL_SMALL)
+		{
+			vy = -MARIO_JUMP_DEFLECT_SPEED;
+			level = MARIO_LEVEL_SMALL;
+			StartUntouchable();
+		}
+		else
+		{
+			DebugOut(L">>> Mario DIE >>> \n");
+			SetState(MARIO_STATE_DIE);
+		}
+	}
 }
 //
 // Get animation ID for small Mario
